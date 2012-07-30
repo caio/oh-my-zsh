@@ -14,6 +14,8 @@ source $ZSH/oh-my-zsh.sh
 make_dir_complete jk ~/src
 make_dir_complete h ~/etc
 
+alias git='nocorrect git'
+
 bindkey '\ew' kill-region
 bindkey -s '\el' "ls\n"
 bindkey '^r' history-incremental-search-backward
