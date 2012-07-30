@@ -3,10 +3,10 @@
 MODE_INDICATOR="%{$fg_bold[cyan]%}--COMMAND--%{$reset_color%}"
 
 git_branch_color() {
-    if test -n git status -s --ignore-submodules=dirty 2>/dev/null; then
-        echo -n "%{$fg[green]%}"
-    else
+    if test -n "$(git status -s --ignore-submodules=dirty 2>/dev/null)"; then
         echo -n "%{$fg[red]%}"
+    else
+        echo -n "%{$fg[green]%}"
     fi
 }
 
