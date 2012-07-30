@@ -2,15 +2,7 @@
 
 MODE_INDICATOR="%{$fg_bold[cyan]%}--COMMAND--%{$reset_color%}"
 
-git_branch_color() {
-    if test -n "$(git status -s --ignore-submodules=dirty 2>/dev/null)"; then
-        echo -n "%{$fg[red]%}"
-    else
-        echo -n "%{$fg[green]%}"
-    fi
-}
-
-ZSH_THEME_GIT_PROMPT_PREFIX="$(git_branch_color)"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_DIRTY=""
